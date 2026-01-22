@@ -1,0 +1,42 @@
+REFACTORING SUMMARY - WHAT I FIXED
+====================================
+
+Summary of what I improved:
+
+CALCULATOR.PY - Main Code Changes:
+----------------------------------
+Fixed the variable naming (was using "numebrs", now consistently "numbers")
+
+Restructured all four functions (add, subtract, multiply, divide):
+   - They now RETURN values instead of just printing
+   - They accept multiple arguments using numbers syntax
+   - Removed the option checking from inside each function
+
+Fixed the function calling logic:
+   - Before: All 4 functions ran every time (inefficient!)
+   - After: Only the selected function runs using if/elif/else
+
+Added proper error handling:
+   - Invalid menu selections now show a helpful error message
+   - Division by zero prints an error and returns None (no crash!)
+
+Changed division from // (integer) to / (decimal) for accurate results
+
+Improved code structure:
+   - Wrapped the interactive code in a main() function
+   - Added if __name__ == "__main__": guard
+   - Now you can import functions without running the whole program!
+
+TEST_CALCULATOR.PY - Test File Changes:
+---------------------------------------
+Fixed the spalling or names: test_subtract_numebrs → test_subtract_numbers
+
+Improved the test class name: TestCal → TestCalculatorFunctions
+
+
+RESULTS:
+--------
+All 4 unit tests now pass successfully!
+Code is cleaner, more professional, and easier to maintain
+Functions can be reused in other projects
+Better error handling prevents crashes

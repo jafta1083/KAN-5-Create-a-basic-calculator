@@ -1,13 +1,13 @@
 import unittest
 from calculator import add, subtract, multiply, divide
 
-class TestCal(unittest.TestCase):
+class TestCalculatorFunctions(unittest.TestCase):
 
     def test_add_numbers(self):
         result = add([1, 2, 3])
         self.assertEqual(result, 6)
 
-    def test_subtract_numebrs(self):
+    def test_subtract_numbers(self):
         result = subtract([50, 25, 5])
         self.assertEqual(result, 20)
 
